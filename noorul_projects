@@ -1,0 +1,176 @@
+listed=[99,55,23,45,12,12,15,18,90,]
+print(listed.sort())
+print(listed)
+#3reverse
+print(listed.sort(reverse=True))
+print(listed)
+
+
+Student1=["noorul",23]
+Student2=["hassan",21]
+print(f'name {Student1[0]} age is {Student1[1]}' )
+print(f"name is {Student2[0]} age is {Student2[1]}")
+
+class Student:
+    name="noorul"
+    age=23
+    city="mardan"
+students1=Student()    
+print(students1.age,students1.city)
+
+
+class Jet:
+    name="rifal"
+    model="5th Generation"
+    model_no=2389
+    country="france"
+    frequency=534
+jet1=Jet()
+print(jet1.model_no,jet1.name,jet1.country)  
+
+class Student:
+    name="noorul"
+    age=25
+    blood="o+"
+    hight=5.6
+    color="white"
+student=Student()
+
+print(Student.name,Student.color,Student.hight)
+
+##==> ___init__     Function
+
+class Student:
+    def __init__(self,name,age,roll_no,class_grade):
+        self.name=name
+        self.age=age
+        self.roll_no=roll_no
+        self.class_grade=class_grade
+student1=Student("noorul hassa",25,12,"1th position")
+print(student1.name,student1.age,student1.roll_no)
+
+class Jet:
+    def __init__(self,name,model,country,frequency):
+        self.name=name
+        self.model=model
+        self.country=country
+        self.frequency=frequency
+fiterjet=Jet("rafil",34218,"france",512)
+print(fiterjet.name,fiterjet.country,fiterjet.frequency)
+print(f"{fiterjet.country},{fiterjet.frequency}")        
+
+
+class Student:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+student1=Student("hoorul hassan", 24)
+print(student1.name,student1.age) 
+
+
+class Student:
+    def __init__(self,name,age,city):
+        self.name=name
+        self.age=age
+        self.city=city
+    def Student_detail(self):
+        print(f"student name is {self.name} age is {self.age} . city name is {self.city}") 
+students1=Student("noorul hassn",23,"mardan")
+students1.Student_detail()
+print(students1.__dict__)
+
+del students1.city d   #delelets the exsiting valuse in 
+print(students1.__dict__)
+
+students1.city="mardan"     
+print(students1.__dict__)
+
+##==> ENCAPCULATION
+
+class Student:
+    def __init__(self,name,age,city):
+        self.name=name
+        self.age=age
+        self.city=city
+
+    def get_cityname(self):
+        return self.city
+
+    def Student_detail(self):
+        print(f"student name {self.name} age is {self.age} city is {self.city}")
+student1=Student("noorul hassan",23,"mardan")
+print(students1.name,students1.age,students1.city)
+student1.Student_detail()
+print(student1.get_cityname())
+
+
+class Student:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def get_age(self):
+        return self.age
+    def Student_detail(self):
+        print(f"{self.name},{self.age}") 
+
+student1=Student("noorul",23)
+student1.Student_detail() 
+print(student1.get_age())   ##encapulation
+ print(student1.__dict__)  
+print(student1.name,student1.age)
+
+
+#==> INHERTENCE
+
+class G_Student(Student):
+    def __init__(self,name,age,stream):
+        super().__init__(name,age)
+        self.__init__(name,age)
+        self.stream=stream
+g_student1=G_Student("noorul hassan",23) 
+print(g_student1.stream)      
+
+
+class D_Student(Student):
+    def __init__(self,name,age,stream):
+        super().__init__(name,age)
+        self.__init__(name,age)
+        self.stream=stream
+g_student1=D_Student("hassan",23)  
+print(g_student1.stream)
+
+
+##==> POLYMORPHISM
+
+class Student1:
+    def __init__(self,name,age,city):
+        self.name=name
+        self.age=age
+        self.city=city
+    def student_details(self):    
+        print(f"student name is {self.name} age is {self.age} . city name is {self.city}") 
+    
+student1=Student1("noorul",23,"mardan")
+print(student1.name,student1.age,student1.city)
+
+student1.student_details()
+
+
+class Country:
+    def __init__(self,name,call_code,capital):
+        self.name=name
+        self.call_code=call_code
+        self.capital=capital
+    def country_details(self):
+        print(f"country name is {self.name} calling code is {self.call_code} country capital is {self.capital}") 
+
+country1=Country("USA" , "+1", "NEW YARK")   
+print(f"COUNTRY NAME:{country1.name}, CALLING_CODE :{country1.call_code}, CAPITAL: {country1.capital}")
+
+country1.country_details()
+
+
+    
+
+
