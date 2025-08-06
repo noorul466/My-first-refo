@@ -1,0 +1,201 @@
+import calendar
+
+year=int(input("inter your year"))
+month=int(input("enter month her"))
+cal=calendar.month(year,month)
+print(cal)
+
+
+
+#2
+
+num =float(input("Enter your number"))
+if num > 0:
+    print("positive")
+elif num == 0:
+    print("zero") 
+else:
+    print("negative number")   
+
+    
+
+#==> 2
+num=float(input("enter Your number here"))
+
+if num % 2 == 0:
+    print("even number")
+else:
+    print("add number")  
+
+
+#==>4
+
+
+year=int(input("Enter Year here")) 
+if year % 2 ==0:
+    print("leaf year")  
+else:
+    print("non leaf year")           
+
+
+#==> 5
+
+num = int(input("Enter a number: "))
+factorial = 1
+if num <0:
+ print("Factirial does not exist for negative numbers")
+elif num == 0:
+ print("Factorial of 0 is 1")
+else:
+ for i in range(1, num+1):
+    factorial = factorial*i
+print(f'The factorial of {num} is {factorial}')
+
+
+#==>6
+
+num=int(input("Enter the number"))
+for i in range(1,16):
+    print(f"{num} X {i} = {num*i}")
+    print(num)
+
+###==> 7
+
+limit=int(input("Enter the number"))
+sum=0
+for i in range(1,limit+1):
+    sum +=i
+
+print(limit ,sum)    
+
+
+##==>   L. C .M
+
+
+def compute_lcm(x,y):
+    if x > y:
+        greater=x
+    else:
+        greater =y
+    while (True):
+        if((greater % x ==0) and (greater % y ==0)):
+            lcm=greater
+            break
+        greater +=1
+    return lcm        
+    
+num1=int(input("Enter the number"))
+num2=int(input("Enter the number"))  
+print(compute_lcm(num1,num2))          
+
+    
+##==.>9 H.C.F     
+
+def compute_hcf(x,y):
+    if x > y:
+        smallar=y
+    else:
+        smallar=x
+    for i in range(1,smallar+1):
+        if ((x % i ==0) and (y % i == 0)):
+            hcf=i      
+    return hcf 
+
+num1=int(input("Enter the value")) 
+num2=int(input("Enter the value")) 
+print("the H.C.F is",compute_hcf(num1,num2))              
+    
+
+
+##==>10
+import math
+num =float(input("Enter the number"))
+
+if num <= 0:
+    print("please Enter positive number")
+else:
+    result=math.log(num)
+    print(f"natural nunber is log {num} result is {result}")
+
+
+##==>11
+def find_largesrt_element(arr):
+    if not arr:
+        return "Arry is empty" 
+        largest_element=arr[0]
+    for i in arr:
+        if i > largest_element:
+            largest_element=i
+    return arr    
+
+
+my_array=[12,22,67,90,27,3,2]
+result=find_largesrt_element(my_array)
+print(f"the largest element is {result}") 
+
+
+##==>13
+
+numbers=[1,2,-3,-45,67,89,90]
+minimum=numbers[0]
+max=numbers[0]
+
+for i in numbers:
+    if i < minimum:
+        minimum =i
+print(minimum) 
+
+
+for i in numbers:
+    if i >max:
+        max =i 
+
+print(max)        
+
+
+##==>14
+
+
+number=[1,2,3,4,5,6,78,9,10]
+eve=[num for num in number if num % 2==0]
+print(eve)
+
+##==> 15
+
+orignal_list=[1,2,3,4,5,6,7,8,9]
+cloned_list=[i for i in orignal_list]
+print(cloned_list)
+
+
+##==>16
+
+def baniry(input_str):
+    for i in input_str:
+        if i not in '101': 
+            return False       
+    return True    
+
+
+input_str='1000110'
+if baniry(input_str):
+    print(f"{input_str}")
+
+
+##==> 17
+
+def add(*args):
+    total=0
+    for i in args:
+        total +=1
+    return total
+
+print(add(1,2,3,4,5,6,7))        
+
+##===>18
+def key_words(**kwargs):
+    for key,value in kwargs.items():
+        print(f"{key}  = {value}")
+
+key_words(name="noorul",age=23)        
+
+
